@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title></title>
+<style type="text/css">
+	body{
+		text-align: center;
+		background: url(2.jpg) no-repeat ;
+		background-size: cover;
+		font-family: 楷体;
+	}
+	#header{
+		clear:both;
+	}
+	#grid{
+		width:736px;height:462px;
+		float:left;
+		margin:10px;
+	}
+	#grid div{
+		width:90px;height:75px;
+		border:1px solid black;
+		float:left;
+		background-color:#FF8C00;
+		opacity:0.8;
+		position:relative;
+	}
+	#grid div img{
+		width:90px;height:75px;
+	}
+	#big_Picture{
+		float:left;
+		width:288px;
+		margin:10px;
+		padding-top:50px;
+	}
+	#big_Picture img{
+		width:288px;height:180px;
+		border: 2px solid #FFE4E1;
+	}
+	#smd{
+		width:200px;height:60px;
+		background-color:#f1735f;
+		position:relative;
+		top:50px;
+		left:50%;
+		transform:translate(-50%,0);
+		border-radius: 50px;
+	}
+	#smd p{
+		text-align: center;
+		line-height:60px;
+		font-size:25px;
+		color:#fff;
+	}
+	#smd:hover{
+		background-color:red;
+		cursor:pointer;/*光标*/
+	}
+	#yt{
+		color:green;
+		font-size:30px;
+	}
+	#timer{
+		height: 50px;line-height: 50px;
+		font-size: 30px;
+		color:#FF4500;
+	}
+	#shadow{
+		width:100%;height:100%;
+		position:fixed;
+		top:0px; left:0px;
+		z-index:90;
+		background-color:#000;
+		opacity:0.8;
+		text-align: center;
+		display:none;
+		color:#fff;
+	}
+	#shadow p {
+		margin-top:10%;
+		color:#fff;
+		font-size: 40px;
+	}
+	#switch span{
+		background-color: green;
+		width:80px;height: 150px;
+		line-height: 150px;
+		font-size: 48px;
+		margin: 20px;
+		border-radius: 20px;
+		
+	}
+	#switch span:hover{
+		cursor:pointer;
+		background-color: #FF7F50;
+	}
+	#result{
+		color:red;
+		font-size:30px;
+	}
+</style>
+</head>
+<body>
+	<div id="header">
+		<h1>拼图游戏</h1>
+	</div>
+	<div id="shadow">
+		<p id="over">恭喜，您已完成拼图!</p>
+		<div id="result"></div>
+		<div id="switch">
+			<span id="again">再玩一次</span>
+			<span id="gover">结束游戏</span>			
+		</div>
+	</div>
+	<div id="big_Picture">
+		<div id="timer"></div>
+		<span id="yt">原图</span>
+		<img src="1.jpg"/>
+		<div id="smd">
+			<p>游戏开始</p>
+		</div>
+	</div>
+	<div id="grid">
+		<div draggable="true" ondragover="dragover(event)"  ondrop="dragdrop(event,this)" ondragstart="dragstart(event,this)"><img src="拼图素材/images/1.jpg"/></div>
+		<div draggable="true" ondragover="dragover(event)"  ondrop="dragdrop(event,this)" ondragstart="dragstart(event,this)"><img src="拼图素材/images/2.jpg"/></div>
+		<div draggable="true" ondragover="dragover(event)"  ondrop="dragdrop(event,this)" ondragstart="dragstart(event,this)"><img src="拼图素材/images/3.jpg"/></div>
+		<div draggable="true" ondragover="dragover(event)"  ondrop="dragdrop(event,this)" ondragstart="dragstart(event,this)"><img src="拼图素材/images/4.jpg"/></div>
+		<div draggable="true" ondragover="dragover(event)"  ondrop="dragdrop(event,this)" ondragstart="dragstart(event,this)"><img src="拼图素材/images/5.jpg"/></div>
+		<div draggable="true" ondragover="dragover(event)"  ondrop="dragdrop(event,this)" ondragstart="dragstart(event,this)"><img src="拼图素材/images/6.jpg"/></div>
+		<div draggable="true" ondragover="dragover(event)"  ondrop="dragdrop(event,this)" ondragstart="dragstart(event,this)"><img src="拼图素材/images/7.jpg"/></div>
+		<div draggable="true" ondragover="dragover(event)"  ondrop="dragdrop(event,this)" ondragstart="dragstart(event,this)"><img src="拼图素材/images/8.jpg"/></div>
+		<div draggable="true" ondragover="dragover(event)"  ondrop="dragdrop(event,this)" ondragstart="dragstart(event,this)"><img src="拼图素材/images/9.jpg"/></div>
+		<div draggable="true" ondragover="dragover(event)"  ondrop="dragdrop(event,this)" ondragstart="dragstart(event,this)"><img src="拼图素材/images/10.jpg"/></div>
+		<div draggable="true" ondragover="dragover(event)"  ondrop="dragdrop(event,this)" ondragstart="dragstart(event,this)"><img src="拼图素材/images/11.jpg"/></div>
+		<div draggable="true" ondragover="dragover(event)"  ondrop="dragdrop(event,this)" ondragstart="dragstart(event,this)"><img src="拼图素材/images/12.jpg"/></div>
+		<div draggable="true" ondragover="dragover(event)"  ondrop="dragdrop(event,this)" ondragstart="dragstart(event,this)"><img src="拼图素材/images/13.jpg"/></div>
+		<div draggable="true" ondragover="dragover(event)"  ondrop="dragdrop(event,this)" ondragstart="dragstart(event,this)"><img src="拼图素材/images/14.jpg"/></div>
+		<div draggable="true" ondragover="dragover(event)"  ondrop="dragdrop(event,this)" ondragstart="dragstart(event,this)"><img src="拼图素材/images/15.jpg"/></div>
+		<div draggable="true" ondragover="dragover(event)"  ondrop="dragdrop(event,this)" ondragstart="dragstart(event,this)"><img src="拼图素材/images/16.jpg"/></div>
+		<div draggable="true" ondragover="dragover(event)"  ondrop="dragdrop(event,this)" ondragstart="dragstart(event,this)"><img src="拼图素材/images/17.jpg"/></div>
+		<div draggable="true" ondragover="dragover(event)"  ondrop="dragdrop(event,this)" ondragstart="dragstart(event,this)"><img src="拼图素材/images/18.jpg"/></div>
+		<div draggable="true" ondragover="dragover(event)"  ondrop="dragdrop(event,this)" ondragstart="dragstart(event,this)"><img src="拼图素材/images/19.jpg"/></div>
+		<div draggable="true" ondragover="dragover(event)"  ondrop="dragdrop(event,this)" ondragstart="dragstart(event,this)"><img src="拼图素材/images/20.jpg"/></div>
+		<div draggable="true" ondragover="dragover(event)"  ondrop="dragdrop(event,this)" ondragstart="dragstart(event,this)"><img src="拼图素材/images/21.jpg"/></div>
+		<div draggable="true" ondragover="dragover(event)"  ondrop="dragdrop(event,this)" ondragstart="dragstart(event,this)"><img src="拼图素材/images/22.jpg"/></div>
+		<div draggable="true" ondragover="dragover(event)"  ondrop="dragdrop(event,this)" ondragstart="dragstart(event,this)"><img src="拼图素材/images/23.jpg"/></div>
+		<div draggable="true" ondragover="dragover(event)"  ondrop="dragdrop(event,this)" ondragstart="dragstart(event,this)"><img src="拼图素材/images/24.jpg"/></div>
+		<div draggable="true" ondragover="dragover(event)"  ondrop="dragdrop(event,this)" ondragstart="dragstart(event,this)"><img src="拼图素材/images/25.jpg"/></div>
+		<div draggable="true" ondragover="dragover(event)"  ondrop="dragdrop(event,this)" ondragstart="dragstart(event,this)"><img src="拼图素材/images/26.jpg"/></div>
+		<div draggable="true" ondragover="dragover(event)"  ondrop="dragdrop(event,this)" ondragstart="dragstart(event,this)"><img src="拼图素材/images/27.jpg"/></div>
+		<div draggable="true" ondragover="dragover(event)"  ondrop="dragdrop(event,this)" ondragstart="dragstart(event,this)"><img src="拼图素材/images/28.jpg"/></div>
+		<div draggable="true" ondragover="dragover(event)"  ondrop="dragdrop(event,this)" ondragstart="dragstart(event,this)"><img src="拼图素材/images/29.jpg"/></div>
+		<div draggable="true" ondragover="dragover(event)"  ondrop="dragdrop(event,this)" ondragstart="dragstart(event,this)"><img src="拼图素材/images/30.jpg"/></div>
+		<div draggable="true" ondragover="dragover(event)"  ondrop="dragdrop(event,this)" ondragstart="dragstart(event,this)"><img src="拼图素材/images/31.jpg"/></div>
+		<div draggable="true" ondragover="dragover(event)"  ondrop="dragdrop(event,this)" ondragstart="dragstart(event,this)"><img src="拼图素材/images/32.jpg"/></div>
+		<div draggable="true" ondragover="dragover(event)"  ondrop="dragdrop(event,this)" ondragstart="dragstart(event,this)"><img src="拼图素材/images/33.jpg"/></div>
+		<div draggable="true" ondragover="dragover(event)"  ondrop="dragdrop(event,this)" ondragstart="dragstart(event,this)"><img src="拼图素材/images/34.jpg"/></div>
+		<div draggable="true" ondragover="dragover(event)"  ondrop="dragdrop(event,this)" ondragstart="dragstart(event,this)"><img src="拼图素材/images/35.jpg"/></div>
+		<div draggable="true" ondragover="dragover(event)"  ondrop="dragdrop(event,this)" ondragstart="dragstart(event,this)"><img src="拼图素材/images/36.jpg"/></div>
+		<div draggable="true" ondragover="dragover(event)"  ondrop="dragdrop(event,this)" ondragstart="dragstart(event,this)"><img src="拼图素材/images/37.jpg"/></div>
+		<div draggable="true" ondragover="dragover(event)"  ondrop="dragdrop(event,this)" ondragstart="dragstart(event,this)"><img src="拼图素材/images/38.jpg"/></div>
+		<div draggable="true" ondragover="dragover(event)"  ondrop="dragdrop(event,this)" ondragstart="dragstart(event,this)"><img src="拼图素材/images/39.jpg"/></div>
+		<div draggable="true" ondragover="dragover(event)"  ondrop="dragdrop(event,this)" ondragstart="dragstart(event,this)"><img src="拼图素材/images/40.jpg"/></div>
+		<div draggable="true" ondragover="dragover(event)"  ondrop="dragdrop(event,this)" ondragstart="dragstart(event,this)"><img src="拼图素材/images/41.jpg"/></div>
+		<div draggable="true" ondragover="dragover(event)"  ondrop="dragdrop(event,this)" ondragstart="dragstart(event,this)"><img src="拼图素材/images/42.jpg"/></div>
+		<div draggable="true" ondragover="dragover(event)"  ondrop="dragdrop(event,this)" ondragstart="dragstart(event,this)"><img src="拼图素材/images/43.jpg"/></div>
+		<div draggable="true" ondragover="dragover(event)"  ondrop="dragdrop(event,this)" ondragstart="dragstart(event,this)"><img src="拼图素材/images/44.jpg"/></div>
+		<div draggable="true" ondragover="dragover(event)"  ondrop="dragdrop(event,this)" ondragstart="dragstart(event,this)"><img src="拼图素材/images/45.jpg"/></div>
+		<div draggable="true" ondragover="dragover(event)"  ondrop="dragdrop(event,this)" ondragstart="dragstart(event,this)"><img src="拼图素材/images/46.jpg"/></div>
+		<div draggable="true" ondragover="dragover(event)"  ondrop="dragdrop(event,this)" ondragstart="dragstart(event,this)"><img src="拼图素材/images/47.jpg"/></div>
+		<div draggable="true" ondragover="dragover(event)"  ondrop="dragdrop(event,this)" ondragstart="dragstart(event,this)"><img src="拼图素材/images/48.jpg"/></div>
+	</div>
+</body>
+<script type="text/javascript">
+	var srcdiv = null;
+	function dragstart(e,divdom){
+		srcdiv=divdom;
+		e.dataTransfer.setData("id",divdom.innerHTML);
+	}
+	function dragover(e){
+		e.preventDefault();
+
+	}
+	function dragdrop(e,divdom){
+		e.preventDefault();
+		if(srcdiv != divdom){
+		srcdiv.innerHTML = divdom.innerHTML;
+		divdom.innerHTML=e.dataTransfer.getData("id");
+		}
+		check();
+	}
+	
+	//随机按钮
+	var btn = document.getElementById("smd");
+	var img = document.getElementById("grid").getElementsByTagName("img");
+	var shadow = document.getElementById("shadow");
+	var again = document.getElementById("again");
+	var gover = document.getElementById("gover");
+	var time = 0;
+	var timer = null;
+	btn.onclick=function(){
+		//shadow.style.display="none";
+		var arr = [];
+		var x;
+		for(var i=0;i<48;i++){
+			do{
+				x = Math.ceil(Math.random()*48);
+				if(arr.indexOf(x)==-1){
+					arr.push(x);
+					break;
+				}
+			}while(true);
+		}
+		for(var i=0;i<48;i++){
+			img[i].src="拼图素材/images/"+arr[i]+".jpg";
+		}
+		
+		timer = window.setInterval(showtime,1000);
+	}
+	/*var btn = document.getElementById("smd");
+	var img = document.getElementById("grid").getElementsByTagName("img");
+	var arr=[];
+	for(var i=0;i<img.length;i++){
+		arr.push({left:img[i].offsetLeft,top:img[i].offsetTop})
+	}
+	for(var i=0;i<img.length;i++){
+		img[i].style.position="absolute";
+		img[i].style.left=arr[i].left+'px';
+		img[i].style.top=arr[i].top+'px';
+	}
+	btn.onclick=function(){
+		arr.sort(function(a,b){
+			return Math.random()-0.5
+		})
+		for(var i=0;i<img.length;i++){
+			img[i].style.left=arr[i].left+'px';
+			img[i].style.top=arr[i].top+'px';
+			img[i].style.transition='1s';
+		}
+	}*/
+
+	//计时器
+	function showtime(){
+		document.getElementById("timer").innerHTML="当前用时"+(++time)+"s。";
+		return time;
+	}
+	//验证是否拼正确
+	function check(){
+		var temp = 0;
+		var img = document.getElementById("grid").getElementsByTagName("img");
+		for(var i=1;i<=48;i++){
+			if(img[i-1].src.slice(img[i-1].src.indexOf('images')) == "images/"+i+".jpg"){
+				temp++;
+			}
+			if(temp == 48){
+				shadow.style.display="block";
+				clearInterval(timer);
+				document.getElementById("result").innerHTML = "本次用时"+time+"s。";
+				
+			}
+		}
+	}
+	again.onclick=function(){
+		window.location.reload();
+	}
+	gover.onclick=function(){
+		window.close();
+	}
+</script>
+</html>
